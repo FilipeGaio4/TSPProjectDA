@@ -1,0 +1,76 @@
+\hypertarget{ManagementSystem_8h_source}{}\doxysection{Management\+System.\+h}
+\label{ManagementSystem_8h_source}\index{/home/filipegaio/Desktop/FEUP/DA/2PROJ/TSPProjectDA/src/ManagementSystem.h@{/home/filipegaio/Desktop/FEUP/DA/2PROJ/TSPProjectDA/src/ManagementSystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by leodr on 02/05/2024.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef TSPPROJECTDA\_MANAGEMENTSYSTEM\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define TSPPROJECTDA\_MANAGEMENTSYSTEM\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}data\_structures/Graph.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classManagementSystem}{ManagementSystem}} \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_ad5902b241eb77d2c2919d6acd6ed893b}{readGraps}}(\textcolor{keywordtype}{string} name);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_aeb6f45c022350a181508678702b031a3}{extraFullyConnectedGraphs}}(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a01e10d7d4d3aff9154ba583dd80a0f4c}{toyGraphsExtra}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a51d0e3e9f844a1b61037e31c727f1129}{toyGraphs}}(\textcolor{keywordtype}{string} name);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a2d4a66f3a66b87bf2ded31f1d92d68ed}{readNodes}}(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a2d4a66f3a66b87bf2ded31f1d92d68ed}{readNodes}}(\textcolor{keywordtype}{string} path);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a5fa7e3b5678bd3ebeaac8c3b2afe287a}{readEdges}}(\textcolor{keywordtype}{string} path);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_aeadcc4269c9d880c9b591d44c0991ab6}{readEdgesFiles}}(\textcolor{keywordtype}{string} name);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{int} \mbox{\hyperlink{classManagementSystem_a1b2e44da7fbdf545bb83ef676d1ab76c}{countEdgeFilesInDir}}(\textcolor{keywordtype}{string} path);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a2baaec1640b15786397c2194eaa22431}{backtracking}}(\textcolor{keyword}{const} \textcolor{keywordtype}{bool} progress);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a63eb2a1c345c558690bd064f1be14c45}{backtrack}}(\mbox{\hyperlink{classVertex}{Vertex<int>}}* v, list<int> path, \textcolor{keywordtype}{double} distance, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} progress);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_aac44eae71bcdc791dbc44a8d6cf609da}{setDisatnce}}(\textcolor{keywordtype}{double} distance);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{double} \mbox{\hyperlink{classManagementSystem_a0a061f1556bd95fd0be88bbf113ea7b0}{getDistance}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{95     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a05f68bc22f261a2c50820171aa205715}{setPath}}(list<int> path);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_afdab5454a6c916e6b989b80b3e0dc89e}{mst}}();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{105     list<int> \mbox{\hyperlink{classManagementSystem_a5d7467861fd8cfd160bd9f9836b256f6}{getPath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{106 \textcolor{keyword}{private}:}
+\DoxyCodeLine{107     \mbox{\hyperlink{classGraph}{Graph<int>}} network; }
+\DoxyCodeLine{108     \textcolor{keywordtype}{double} best\_distance; }
+\DoxyCodeLine{109     list<int> best\_path; }
+\DoxyCodeLine{110 \textcolor{keyword}{public}:}
+\DoxyCodeLine{114     \textcolor{keyword}{const} \mbox{\hyperlink{classGraph}{Graph<int>}} \&\mbox{\hyperlink{classManagementSystem_a54096ecf35d2ffd808259a0fbe45f42c}{getNetwork}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a6a7e33da8542ce25eec45f8c92a1fd58}{setNetwork}}(\textcolor{keyword}{const} \mbox{\hyperlink{classGraph}{Graph<int>}} \&network);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} \mbox{\hyperlink{classManagementSystem_a59fe16f8f579fc876403783a010780f2}{dfsMst}}(\mbox{\hyperlink{classVertex}{Vertex<int>}} *vertex, vector<int> \&path, \textcolor{keywordtype}{int} \&count);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{132     \textcolor{keywordtype}{double} \mbox{\hyperlink{classManagementSystem_a76e1b68acb687ae694f70e69249396e6}{calculateTriangular}}(vector<int> \&path);}
+\DoxyCodeLine{139     \textcolor{keywordtype}{double} \mbox{\hyperlink{classManagementSystem_a142d8226045c73c28358438efe23a05d}{nearestNeighbour}}(vector<int> \&path, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{144     \textcolor{keywordtype}{double} \mbox{\hyperlink{classManagementSystem_acb40995d8ee5a99f920004a5d443d98f}{findNearest}}(\mbox{\hyperlink{classVertex}{Vertex<int>}} *atual, \mbox{\hyperlink{classVertex}{Vertex<int>}} *\&nextVertex);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{double} \mbox{\hyperlink{classManagementSystem_a76152aa379f0d19f317ca541d98aabd9}{dijkstra}}(\mbox{\hyperlink{classVertex}{Vertex<int>}} *source, \mbox{\hyperlink{classVertex}{Vertex<int>}} *dest, vector<int> \&path);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{168     \textcolor{keywordtype}{double} \mbox{\hyperlink{classManagementSystem_a5d9ed550a6e54ffcec6e8ce3e62f4297}{realWorldTSP}}(vector<int> \&path, \textcolor{keywordtype}{int} start);}
+\DoxyCodeLine{169 \};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//TSPPROJECTDA\_MANAGEMENTSYSTEM\_H}}
+
+\end{DoxyCode}

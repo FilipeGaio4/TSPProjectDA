@@ -1,0 +1,349 @@
+\hypertarget{classManagementSystem}{}\doxysection{Management\+System Class Reference}
+\label{classManagementSystem}\index{ManagementSystem@{ManagementSystem}}
+
+
+{\ttfamily \#include $<$Management\+System.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classManagementSystem_ad5902b241eb77d2c2919d6acd6ed893b}{read\+Graps}} (string name)
+\item 
+void \mbox{\hyperlink{classManagementSystem_aeb6f45c022350a181508678702b031a3}{extra\+Fully\+Connected\+Graphs}} (int i)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a01e10d7d4d3aff9154ba583dd80a0f4c}{toy\+Graphs\+Extra}} ()
+\item 
+void \mbox{\hyperlink{classManagementSystem_a51d0e3e9f844a1b61037e31c727f1129}{toy\+Graphs}} (string name)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a2d4a66f3a66b87bf2ded31f1d92d68ed}{read\+Nodes}} (int i)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a43fa6e642520902d1081fe720eb86bfc}{read\+Nodes}} (string path)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a5fa7e3b5678bd3ebeaac8c3b2afe287a}{read\+Edges}} (string path)
+\item 
+void \mbox{\hyperlink{classManagementSystem_aeadcc4269c9d880c9b591d44c0991ab6}{read\+Edges\+Files}} (string name)
+\item 
+int \mbox{\hyperlink{classManagementSystem_a1b2e44da7fbdf545bb83ef676d1ab76c}{count\+Edge\+Files\+In\+Dir}} (string path)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a2baaec1640b15786397c2194eaa22431}{backtracking}} (const bool progress)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a63eb2a1c345c558690bd064f1be14c45}{backtrack}} (\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$v, list$<$ int $>$ path, double distance, const bool progress)
+\item 
+void \mbox{\hyperlink{classManagementSystem_aac44eae71bcdc791dbc44a8d6cf609da}{set\+Disatnce}} (double distance)
+\item 
+double \mbox{\hyperlink{classManagementSystem_a0a061f1556bd95fd0be88bbf113ea7b0}{get\+Distance}} () const
+\item 
+void \mbox{\hyperlink{classManagementSystem_a05f68bc22f261a2c50820171aa205715}{set\+Path}} (list$<$ int $>$ path)
+\item 
+void \mbox{\hyperlink{classManagementSystem_afdab5454a6c916e6b989b80b3e0dc89e}{mst}} ()
+\item 
+list$<$ int $>$ \mbox{\hyperlink{classManagementSystem_a5d7467861fd8cfd160bd9f9836b256f6}{get\+Path}} () const
+\item 
+const \mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \& \mbox{\hyperlink{classManagementSystem_a54096ecf35d2ffd808259a0fbe45f42c}{get\+Network}} () const
+\item 
+void \mbox{\hyperlink{classManagementSystem_a6a7e33da8542ce25eec45f8c92a1fd58}{set\+Network}} (const \mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \&network)
+\item 
+void \mbox{\hyperlink{classManagementSystem_a59fe16f8f579fc876403783a010780f2}{dfs\+Mst}} (\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$vertex, vector$<$ int $>$ \&path, int \&count)
+\item 
+double \mbox{\hyperlink{classManagementSystem_a76e1b68acb687ae694f70e69249396e6}{calculate\+Triangular}} (vector$<$ int $>$ \&path)
+\item 
+double \mbox{\hyperlink{classManagementSystem_a142d8226045c73c28358438efe23a05d}{nearest\+Neighbour}} (vector$<$ int $>$ \&path, int id)
+\item 
+double \mbox{\hyperlink{classManagementSystem_acb40995d8ee5a99f920004a5d443d98f}{find\+Nearest}} (\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$atual, \mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$\&next\+Vertex)
+\item 
+double \mbox{\hyperlink{classManagementSystem_a76152aa379f0d19f317ca541d98aabd9}{dijkstra}} (\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$source, \mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$dest, vector$<$ int $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Executa o algoritmo de Dijkstra para encontrar o caminho mais curto entre dois vértices. Complexidade temporal\+: O(\+E $\ast$ log(\+V)). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classManagementSystem_a5d9ed550a6e54ffcec6e8ce3e62f4297}{real\+World\+TSP}} (vector$<$ int $>$ \&path, int start)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que define um objeto do tipo \mbox{\hyperlink{classManagementSystem}{Management\+System}}. Um objeto desta classe tem 3 membros privados. Um grafo do tipo int que representa a rede de pontos a ser visitados. Duas vari\textquotesingle{}aveis do tipo double e list$<$int$>$ para ajudar a fazer backtracking 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classManagementSystem_a63eb2a1c345c558690bd064f1be14c45}\label{classManagementSystem_a63eb2a1c345c558690bd064f1be14c45}} 
+\index{ManagementSystem@{ManagementSystem}!backtrack@{backtrack}}
+\index{backtrack@{backtrack}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{backtrack()}{backtrack()}}
+{\footnotesize\ttfamily void Management\+System\+::backtrack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$}]{v,  }\item[{list$<$ int $>$}]{path,  }\item[{double}]{distance,  }\item[{const bool}]{progress }\end{DoxyParamCaption})}
+
+Função recursiva que faz backtracking. Complexidade temporal\+: O(V² + E). 
+\begin{DoxyParams}{Parameters}
+{\em v} & vértice a ser analisado \\
+\hline
+{\em path} & percurso até ao vértice \\
+\hline
+{\em distance} & distância do percurso percorrido até ao vértice \\
+\hline
+{\em progress} & true para ver o progresso do backtracking \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a2baaec1640b15786397c2194eaa22431}\label{classManagementSystem_a2baaec1640b15786397c2194eaa22431}} 
+\index{ManagementSystem@{ManagementSystem}!backtracking@{backtracking}}
+\index{backtracking@{backtracking}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{backtracking()}{backtracking()}}
+{\footnotesize\ttfamily void Management\+System\+::backtracking (\begin{DoxyParamCaption}\item[{const bool}]{progress }\end{DoxyParamCaption})}
+
+Função que inicia o backtracking. 
+\begin{DoxyParams}{Parameters}
+{\em progress} & true para ver o progresso do backtracking \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a76e1b68acb687ae694f70e69249396e6}\label{classManagementSystem_a76e1b68acb687ae694f70e69249396e6}} 
+\index{ManagementSystem@{ManagementSystem}!calculateTriangular@{calculateTriangular}}
+\index{calculateTriangular@{calculateTriangular}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{calculateTriangular()}{calculateTriangular()}}
+{\footnotesize\ttfamily double Management\+System\+::calculate\+Triangular (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{path }\end{DoxyParamCaption})}
+
+Função que calcula o melhor percurso usando Triangular Approximation Heuristic. Complexidade temporal\+: O(1). 
+\begin{DoxyParams}{Parameters}
+{\em path} & variável onde é armasenado o percurso calculado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a1b2e44da7fbdf545bb83ef676d1ab76c}\label{classManagementSystem_a1b2e44da7fbdf545bb83ef676d1ab76c}} 
+\index{ManagementSystem@{ManagementSystem}!countEdgeFilesInDir@{countEdgeFilesInDir}}
+\index{countEdgeFilesInDir@{countEdgeFilesInDir}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{countEdgeFilesInDir()}{countEdgeFilesInDir()}}
+{\footnotesize\ttfamily int Management\+System\+::count\+Edge\+Files\+In\+Dir (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+Função que conta o número de ficheiros de edges dos Real-\/world-\/\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em path} & path da pasta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+número de ficheiros de edges do grafo selecionado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_a59fe16f8f579fc876403783a010780f2}\label{classManagementSystem_a59fe16f8f579fc876403783a010780f2}} 
+\index{ManagementSystem@{ManagementSystem}!dfsMst@{dfsMst}}
+\index{dfsMst@{dfsMst}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{dfsMst()}{dfsMst()}}
+{\footnotesize\ttfamily void Management\+System\+::dfs\+Mst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$}]{vertex,  }\item[{vector$<$ int $>$ \&}]{path,  }\item[{int \&}]{count }\end{DoxyParamCaption})}
+
+Funçao que faz dfs pela mst. Complexidade temporal\+: O(V+E). 
+\begin{DoxyParams}{Parameters}
+{\em vertex} & vértice a ser analisado \\
+\hline
+{\em path} & variável onde é armasenado o percurso calculado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a76152aa379f0d19f317ca541d98aabd9}\label{classManagementSystem_a76152aa379f0d19f317ca541d98aabd9}} 
+\index{ManagementSystem@{ManagementSystem}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily double Management\+System\+::dijkstra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$}]{source,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$}]{dest,  }\item[{vector$<$ int $>$ \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Executa o algoritmo de Dijkstra para encontrar o caminho mais curto entre dois vértices. Complexidade temporal\+: O(\+E $\ast$ log(\+V)). 
+
+Esta função calcula o caminho mais curto de um vértice de origem para um vértice de destino num grafo. Utiliza o algoritmo de Dijkstra para determinar o caminho e retorna a distância total desse caminho. O próprio caminho é armazenado no vetor fornecido.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Um ponteiro para o vértice de origem. \\
+\hline
+{\em dest} & Um ponteiro para o vértice de destino. \\
+\hline
+{\em path} & Uma referência para um vetor onde o caminho resultante será armazenado. O caminho será uma sequência de índices de vértices desde a origem até ao destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A distância total do caminho mais curto desde a origem até ao destino. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_aeb6f45c022350a181508678702b031a3}\label{classManagementSystem_aeb6f45c022350a181508678702b031a3}} 
+\index{ManagementSystem@{ManagementSystem}!extraFullyConnectedGraphs@{extraFullyConnectedGraphs}}
+\index{extraFullyConnectedGraphs@{extraFullyConnectedGraphs}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{extraFullyConnectedGraphs()}{extraFullyConnectedGraphs()}}
+{\footnotesize\ttfamily void Management\+System\+::extra\+Fully\+Connected\+Graphs (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Função que chama as funções que leem os ficheiros Extra\+\_\+\+Fully\+\_\+\+Connected\+\_\+\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em i} & número de nodes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_acb40995d8ee5a99f920004a5d443d98f}\label{classManagementSystem_acb40995d8ee5a99f920004a5d443d98f}} 
+\index{ManagementSystem@{ManagementSystem}!findNearest@{findNearest}}
+\index{findNearest@{findNearest}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{findNearest()}{findNearest()}}
+{\footnotesize\ttfamily double Management\+System\+::find\+Nearest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$}]{atual,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ int $>$ $\ast$\&}]{next\+Vertex }\end{DoxyParamCaption})}
+
+Função que calcula o vertex mais proximo usando haversine (auxiliar function Nearest Neigbour) \begin{DoxyReturn}{Returns}
+distancia ate ao mais proximo vertex 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_a0a061f1556bd95fd0be88bbf113ea7b0}\label{classManagementSystem_a0a061f1556bd95fd0be88bbf113ea7b0}} 
+\index{ManagementSystem@{ManagementSystem}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily double Management\+System\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Função que retorna o valor best\+\_\+distance. \begin{DoxyReturn}{Returns}
+valor best\+\_\+distance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_a54096ecf35d2ffd808259a0fbe45f42c}\label{classManagementSystem_a54096ecf35d2ffd808259a0fbe45f42c}} 
+\index{ManagementSystem@{ManagementSystem}!getNetwork@{getNetwork}}
+\index{getNetwork@{getNetwork}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{getNetwork()}{getNetwork()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \& Management\+System\+::get\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Funçao que retorna o grafo network. \begin{DoxyReturn}{Returns}
+grafo network. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_a5d7467861fd8cfd160bd9f9836b256f6}\label{classManagementSystem_a5d7467861fd8cfd160bd9f9836b256f6}} 
+\index{ManagementSystem@{ManagementSystem}!getPath@{getPath}}
+\index{getPath@{getPath}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily list$<$ int $>$ Management\+System\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Função que retorna a lista best\+\_\+path. \begin{DoxyReturn}{Returns}
+lista best\+\_\+path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_afdab5454a6c916e6b989b80b3e0dc89e}\label{classManagementSystem_afdab5454a6c916e6b989b80b3e0dc89e}} 
+\index{ManagementSystem@{ManagementSystem}!mst@{mst}}
+\index{mst@{mst}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{mst()}{mst()}}
+{\footnotesize\ttfamily void Management\+System\+::mst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funçao que cria uma mst. \mbox{\Hypertarget{classManagementSystem_a142d8226045c73c28358438efe23a05d}\label{classManagementSystem_a142d8226045c73c28358438efe23a05d}} 
+\index{ManagementSystem@{ManagementSystem}!nearestNeighbour@{nearestNeighbour}}
+\index{nearestNeighbour@{nearestNeighbour}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{nearestNeighbour()}{nearestNeighbour()}}
+{\footnotesize\ttfamily double Management\+System\+::nearest\+Neighbour (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{path,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Função que calcula o percurso ao ir sempre para o vertex mais próximo. Se não houver edge verifica haversine para todos os não visitados Complexidade temporal\+: O(\+V$^\wedge$2 $\ast$ E). 
+\begin{DoxyParams}{Parameters}
+{\em path} & variável onde é armasenado o percurso calculado \\
+\hline
+{\em id} & variável onde começa o path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distancia do path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_a5fa7e3b5678bd3ebeaac8c3b2afe287a}\label{classManagementSystem_a5fa7e3b5678bd3ebeaac8c3b2afe287a}} 
+\index{ManagementSystem@{ManagementSystem}!readEdges@{readEdges}}
+\index{readEdges@{readEdges}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{readEdges()}{readEdges()}}
+{\footnotesize\ttfamily void Management\+System\+::read\+Edges (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+Função que lê os ficheiros de edges dos Extra\+\_\+\+Fully\+\_\+\+Connected\+\_\+\+Graph e dos Real-\/world-\/\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em path} & path do ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_aeadcc4269c9d880c9b591d44c0991ab6}\label{classManagementSystem_aeadcc4269c9d880c9b591d44c0991ab6}} 
+\index{ManagementSystem@{ManagementSystem}!readEdgesFiles@{readEdgesFiles}}
+\index{readEdgesFiles@{readEdgesFiles}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{readEdgesFiles()}{readEdgesFiles()}}
+{\footnotesize\ttfamily void Management\+System\+::read\+Edges\+Files (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Função que chama read\+Edges para ler todos os ficheiros de edges dos Real-\/world-\/\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em name} & pasta dos ficheiros \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_ad5902b241eb77d2c2919d6acd6ed893b}\label{classManagementSystem_ad5902b241eb77d2c2919d6acd6ed893b}} 
+\index{ManagementSystem@{ManagementSystem}!readGraps@{readGraps}}
+\index{readGraps@{readGraps}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{readGraps()}{readGraps()}}
+{\footnotesize\ttfamily void Management\+System\+::read\+Graps (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Função que chama as funções que leem os ficheiros Real-\/world-\/\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em name} & número do grafo escolhido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a2d4a66f3a66b87bf2ded31f1d92d68ed}\label{classManagementSystem_a2d4a66f3a66b87bf2ded31f1d92d68ed}} 
+\index{ManagementSystem@{ManagementSystem}!readNodes@{readNodes}}
+\index{readNodes@{readNodes}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{readNodes()}{readNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Management\+System\+::read\+Nodes (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Função que lê o ficheiro de nodes dos Extra\+\_\+\+Fully\+\_\+\+Connected\+\_\+\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em i} & número de nodes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a43fa6e642520902d1081fe720eb86bfc}\label{classManagementSystem_a43fa6e642520902d1081fe720eb86bfc}} 
+\index{ManagementSystem@{ManagementSystem}!readNodes@{readNodes}}
+\index{readNodes@{readNodes}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{readNodes()}{readNodes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Management\+System\+::read\+Nodes (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+Função que lê o ficheiro de nodes dos Real-\/world-\/\+Graphs. 
+\begin{DoxyParams}{Parameters}
+{\em path} & path do ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a5d9ed550a6e54ffcec6e8ce3e62f4297}\label{classManagementSystem_a5d9ed550a6e54ffcec6e8ce3e62f4297}} 
+\index{ManagementSystem@{ManagementSystem}!realWorldTSP@{realWorldTSP}}
+\index{realWorldTSP@{realWorldTSP}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{realWorldTSP()}{realWorldTSP()}}
+{\footnotesize\ttfamily double Management\+System\+::real\+World\+TSP (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{path,  }\item[{int}]{start }\end{DoxyParamCaption})}
+
+Função que calcula o percurso ao ir sempre para o vertex mais próximo. Se não houver edge usa dijkstra para encontrar o caminho mais próximo mesmo que repita vertices Complexidade temporal\+: O(\+V$^\wedge$2 $\ast$ E$^\wedge$2 $\ast$ log(\+V)). 
+\begin{DoxyParams}{Parameters}
+{\em path} & variável onde é armasenado o percurso calculado \\
+\hline
+{\em id} & variável onde começa o path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distancia do path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classManagementSystem_aac44eae71bcdc791dbc44a8d6cf609da}\label{classManagementSystem_aac44eae71bcdc791dbc44a8d6cf609da}} 
+\index{ManagementSystem@{ManagementSystem}!setDisatnce@{setDisatnce}}
+\index{setDisatnce@{setDisatnce}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{setDisatnce()}{setDisatnce()}}
+{\footnotesize\ttfamily void Management\+System\+::set\+Disatnce (\begin{DoxyParamCaption}\item[{double}]{distance }\end{DoxyParamCaption})}
+
+Funçao que permite alterar o valor best\+\_\+distance. 
+\begin{DoxyParams}{Parameters}
+{\em network} & novo valor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a6a7e33da8542ce25eec45f8c92a1fd58}\label{classManagementSystem_a6a7e33da8542ce25eec45f8c92a1fd58}} 
+\index{ManagementSystem@{ManagementSystem}!setNetwork@{setNetwork}}
+\index{setNetwork@{setNetwork}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{setNetwork()}{setNetwork()}}
+{\footnotesize\ttfamily void Management\+System\+::set\+Network (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \&}]{network }\end{DoxyParamCaption})}
+
+Funçao que permite alterar o grafo network. 
+\begin{DoxyParams}{Parameters}
+{\em network} & novo grafo network. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a05f68bc22f261a2c50820171aa205715}\label{classManagementSystem_a05f68bc22f261a2c50820171aa205715}} 
+\index{ManagementSystem@{ManagementSystem}!setPath@{setPath}}
+\index{setPath@{setPath}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Management\+System\+::set\+Path (\begin{DoxyParamCaption}\item[{list$<$ int $>$}]{path }\end{DoxyParamCaption})}
+
+Funçao que permite alterar a lista best\+\_\+path. 
+\begin{DoxyParams}{Parameters}
+{\em path} & nova lista. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a51d0e3e9f844a1b61037e31c727f1129}\label{classManagementSystem_a51d0e3e9f844a1b61037e31c727f1129}} 
+\index{ManagementSystem@{ManagementSystem}!toyGraphs@{toyGraphs}}
+\index{toyGraphs@{toyGraphs}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{toyGraphs()}{toyGraphs()}}
+{\footnotesize\ttfamily void Management\+System\+::toy\+Graphs (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Função que lê shipping.\+csv ou stadiums.\+csv. 
+\begin{DoxyParams}{Parameters}
+{\em name} & nome do ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManagementSystem_a01e10d7d4d3aff9154ba583dd80a0f4c}\label{classManagementSystem_a01e10d7d4d3aff9154ba583dd80a0f4c}} 
+\index{ManagementSystem@{ManagementSystem}!toyGraphsExtra@{toyGraphsExtra}}
+\index{toyGraphsExtra@{toyGraphsExtra}!ManagementSystem@{ManagementSystem}}
+\doxysubsubsection{\texorpdfstring{toyGraphsExtra()}{toyGraphsExtra()}}
+{\footnotesize\ttfamily void Management\+System\+::toy\+Graphs\+Extra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Função que lê o ficheiro tourism.\+csv. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filipegaio/\+Desktop/\+FEUP/\+DA/2\+PROJ/\+TSPProject\+DA/src/Management\+System.\+h\item 
+/home/filipegaio/\+Desktop/\+FEUP/\+DA/2\+PROJ/\+TSPProject\+DA/src/Management\+System.\+cpp\end{DoxyCompactItemize}

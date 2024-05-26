@@ -1,0 +1,70 @@
+\hypertarget{MSTTestAux_8h_source}{}\doxysection{MSTTest\+Aux.\+h}
+\label{MSTTestAux_8h_source}\index{/home/filipegaio/Desktop/FEUP/DA/2PROJ/TSPProjectDA/src/data\_structures/MSTTestAux.h@{/home/filipegaio/Desktop/FEUP/DA/2PROJ/TSPProjectDA/src/data\_structures/MSTTestAux.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TEST\_AUX\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TEST\_AUX\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Graph.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{12 \textcolor{keywordtype}{bool} isSpanningTree(\textcolor{keyword}{const} std::vector<\mbox{\hyperlink{classVertex}{Vertex<T>}} *> \&res);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{15 \textcolor{keywordtype}{double} spanningTreeCost(\textcolor{keyword}{const} std::vector<\mbox{\hyperlink{classVertex}{Vertex<T>}} *> \&res);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{18 \textcolor{keywordtype}{bool} isSpanningTree(\textcolor{keyword}{const} std::vector<\mbox{\hyperlink{classVertex}{Vertex<T>}} *> \&res)\{}
+\DoxyCodeLine{19     std::map<int, std::set<int> > adj;}
+\DoxyCodeLine{20     \textcolor{keywordflow}{for}(\textcolor{keyword}{const} \mbox{\hyperlink{classVertex}{Vertex<T>}} *v: res) \{}
+\DoxyCodeLine{21         adj[v-\/>getInfo()];}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (v-\/>getPath() != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{23             \mbox{\hyperlink{classVertex}{Vertex<T>}} *u = v-\/>getPath()-\/>getOrig();}
+\DoxyCodeLine{24             adj[u-\/>getInfo()].emplace(v-\/>getInfo());}
+\DoxyCodeLine{25             adj[v-\/>getInfo()].emplace(u-\/>getInfo());}
+\DoxyCodeLine{26         \}}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     std::queue<int> q;}
+\DoxyCodeLine{30     std::set<int> visited;}
+\DoxyCodeLine{31     q.push(res.at(0)-\/>getInfo());}
+\DoxyCodeLine{32     \textcolor{keywordflow}{while}(!q.empty())\{}
+\DoxyCodeLine{33         \textcolor{keywordtype}{int} u = q.front(); q.pop();}
+\DoxyCodeLine{34         \textcolor{keywordflow}{if}(visited.count(u)) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{35         visited.emplace(u);}
+\DoxyCodeLine{36         \textcolor{keywordflow}{for}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&v: adj.at(u))\{}
+\DoxyCodeLine{37             q.emplace(v);}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordflow}{for}(\textcolor{keyword}{const} \mbox{\hyperlink{classVertex}{Vertex<T>}} *v: res)}
+\DoxyCodeLine{42         \textcolor{keywordflow}{if}(!visited.count(v-\/>getInfo())) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{44 \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{47 \textcolor{keywordtype}{double} spanningTreeCost(\textcolor{keyword}{const} std::vector<\mbox{\hyperlink{classVertex}{Vertex<T>}} *> \&res)\{}
+\DoxyCodeLine{48     \textcolor{keywordtype}{double} ret = 0;}
+\DoxyCodeLine{49     \textcolor{keywordflow}{for}(\textcolor{keyword}{const} \mbox{\hyperlink{classVertex}{Vertex<T>}} *v: res)\{}
+\DoxyCodeLine{50         \textcolor{keywordflow}{if}(v-\/>getPath() == \textcolor{keyword}{nullptr}) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{51         \textcolor{keyword}{const} \mbox{\hyperlink{classVertex}{Vertex<T>}} *u = v-\/>getPath()-\/>getOrig();}
+\DoxyCodeLine{52         \textcolor{keywordflow}{for}(\textcolor{keyword}{const} \textcolor{keyword}{auto} e: u-\/>getAdj())\{}
+\DoxyCodeLine{53             \textcolor{keywordflow}{if}(e-\/>getDest()-\/>getInfo() == v-\/>getInfo())\{}
+\DoxyCodeLine{54                 ret += e-\/>getWeight();}
+\DoxyCodeLine{55                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{56             \}}
+\DoxyCodeLine{57         \}}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{60 \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//TEST\_AUX\_H\_}}
+
+\end{DoxyCode}
